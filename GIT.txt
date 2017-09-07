@@ -1,2 +1,7 @@
 убрать папки или файлы от отслеживания гитом:
 git rm -r --cached .idea 
+посмотреть настройки гита 
+git config --list
+установка имени и почты используемых гитом
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
