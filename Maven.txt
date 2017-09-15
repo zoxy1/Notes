@@ -1,0 +1,5 @@
+mvn validate -Dcheckstyle.skyp=true //пропуск проверки на ошибки связанные со стилем кода
+
+Настройки: 
+Для того чтобы Maven проекты автоматически нужно зайти в settings -> найти maven -> 
+Importing -> поставить галку  Import Maven projects automatically

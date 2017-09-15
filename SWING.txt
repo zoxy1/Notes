@@ -1,0 +1,75 @@
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // указывает что при нажатии на крестик окно закроется и программа закроется, если эту строку не указать то при нажатии на крестик окно закроется а программа будет продолжать работать
+frame.setLocationRelativeTo(null); // окно jframe появляется в середине экрана
+
+frame.setState(JFrame.ICONIFIED); // форма свернется
+frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // форма развернется на максимальный размер, если не указан то на весь экран
+frame.setExtendedState(JFrame.NORMAL); // форма развернется на указанные размеры  
+frame.setPreferredSize(new Dimension(270, 225));
+
+try {
+                    Thread.sleep(3000); // задержка в 3 секунды
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+
+frame.addWindowListener(new WindowListener() { // добавляем слушателя на разные события окна
+                    public void windowOpened(WindowEvent e) {
+
+                    }
+
+                    public void windowClosing(WindowEvent e) {
+                        System.out.println("закрыли сом порт");
+                    }
+
+                    public void windowClosed(WindowEvent e) {
+
+                    }
+
+                    public void windowIconified(WindowEvent e) {
+
+                    }
+
+                    public void windowDeiconified(WindowEvent e) {
+
+                    }
+
+                    public void windowActivated(WindowEvent e) {
+
+                    }
+
+                    public void windowDeactivated(WindowEvent e) {
+
+                    }
+                });
+
+
+
+
+JButton startButton = new JButton("Start"); // добавить кнопку на JFrame
+                frame.add(startButton);
+
+frame.setLayout(new GridBagLayout()); // Frame помещаем в слой GridBagLayout
+
+startButton.setBackground(Color.green); // задаем цвет фона кнопки
+startButton.setBackground(new Color(123,123,123)); // цвет кнопки в RGB
+
+startButton.setForeground(Color.YELLOW); // цвет текста на кнопке
+
+Cursor cursor = new Cursor (Cursor.TEXT_CURSOR);
+                startButton.setCursor(cursor); // устанавливаем различные курсоры при наведении мышкой
+
+JTextField fieldInText = new JTextField(10);
+
+                frame.add(fieldInText); // добавляем поле ввода на Frame
+fieldInText.setEditable(false); // в поле ничего нельзя вводить
+fieldInText.getText() // получаем то что записано в строке ввода
+JPasswordField jPasswordField = new JPasswordField(); // поле ввода для пароля, при вводе показывается звездочками
+
+ JLabel jlabel = new JLabel("Какой то текст");
+                frame.add(jlabel); // выводит текст
+
+Font font = new Font("Verdana", Font.PLAIN, 11); // тип шрифта
+label.setFont(font);
+
+
