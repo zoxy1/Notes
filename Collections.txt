@@ -1,0 +1,26 @@
+// простое создание коллекции с помощью метода Arrays.asList()
+arrayList.addAll(Arrays.asList(new String("text1"), new String("text1"))); 
+// для сортировки коллекции переопределяем метод compare()
+arrayList.sort(new Comparator<String>() {
+	@override
+	public int compare(String stringOne, String stringTwo) {
+		return stringOne.compareTo(stringTwo); 
+		// если равны возращаем 0, 
+		// stringOne>stringTwo возращаем 1,  
+		// stringOne<stringTwo возращаем -1
+	}
+}
+
+// Сортировку можно сделать только в коллекциях типа List и TreeSet, в HashSet(внутри реализован на базе HashMap) нельзя тк порядок не гарантируется
+// сортировку можно сделать если реализовать у сортируемых обьектов интерфейс Comparable и
+// переопределив метод compareTo(), пример:
+class User implements Comparable <User> {
+private final String name;
+	User(String name) {
+		this.name = name;
+	}
+	@Override
+	public int compareTo(User o) {
+		return this.name.compareTo(o.name);
+	}
+}
