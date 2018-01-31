@@ -25,6 +25,7 @@ Ctrl+Alt+S выводит окно настроек
 Ctrl+Shift+Alt+S  настройка версии JDK для текущего проекта
 Ctrl+Shift+A быстрый поиска по настройкам, можно поискать Zoom и поставить галочку чтобы скролом текст увеличивался уменьшался
 Ctrl+Alt+S -> Editor -> General -> Appearance -> Show method separators показывать линии разделяющие методы 
+Settings -> Editor -> General -> Auto Import -> Optimize imports on the fly (fo current project) включение автоматического оптимизации импортов в проекте
 
 Форматирование:
 Ctrl+ Shift + / закоментировать блок кода
